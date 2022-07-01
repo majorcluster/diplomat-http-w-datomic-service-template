@@ -1,4 +1,4 @@
-(ns leiningen.new.leiningen.new.diplomat-http-w-datomic-service
+(ns leiningen.new.diplomat-http-w-datomic-service
   (:require [leiningen.new.templates :as tmpl]
             [leiningen.core.main :as main]))
 
