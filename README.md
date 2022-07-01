@@ -2,7 +2,7 @@
 
 A Leiningen template for generating a diplomat-architecture styled pedestal service
 The ports available at this template are: 
-- http inbound, having foo route specified as a sample
+- http inbound, having breads route specified as a sample
 - datomic outbound
 
 ## Usage
