@@ -1,0 +1,5 @@
+{
+ {{namespace}}.ports.datomic.core/db-host      "datomic:mem:/"
+ {{namespace}}.ports.datomic.core/db-name      "{{namespace}}"
+ {{namespace}}.configs/env                     "test"
+ }

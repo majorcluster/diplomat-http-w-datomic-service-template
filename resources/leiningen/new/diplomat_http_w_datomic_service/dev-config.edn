@@ -1,0 +1,5 @@
+{
+ {{namespace}}.ports.datomic.core/db-host    "datomic:free://localhost:4334"
+ {{namespace}}.ports.datomic.core/db-name    "{{namespace}}"
+ {{namespace}}.configs/env                   "dev"
+ }
