@@ -1,5 +1,7 @@
 # org.clojars.majorcluster/diplomat-http-w-datomic-service
 
+[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.majorcluster/lein-template.diplomat-http-w-datomic-service.svg)](https://clojars.org/org.clojars.majorcluster/lein-template.diplomat-http-w-datomic-service) 
+
 A Leiningen template for generating a diplomat-architecture styled pedestal service
 The ports available at this template are: 
 - http inbound, having breads route specified as a sample
