@@ -10,9 +10,9 @@ docker run -d -e ADMIN_PASSWORD="admin" -e DATOMIC_PASSWORD="datomic" -p 4334-43
 ```
 2. For pro datomic, follow the docs: [Get Datomic](https://www.datomic.com/get-datomic.html)
 3. Start the application: `lein with-profile dev run`
-4. Start dev server: `lein run-dev-w-migration` or `lein run-dev`
+4. Start dev server: `lein run-dev`
 5. Go to [localhost:8080](http://localhost:8080/breads) to see a nice list of breads in json!
-6. Read your app's source code at src/{{namespace}}/service.clj. Explore the docs of functions
+6. Read your app's source code at src/my-test/service.clj. Explore the docs of functions
    that define routes and responses.
 7. Edit your datomic schema at `ports/datomic/schema.clj` as you wish.
 8. Run your app's tests with `lein test`.
