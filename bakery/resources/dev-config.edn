@@ -1,5 +1,0 @@
-{
- bakery.ports.datomic.core/db-host    "datomic:free://localhost:4334"
- bakery.ports.datomic.core/db-name    "bakery"
- bakery.configs/env                   "dev"
- }
