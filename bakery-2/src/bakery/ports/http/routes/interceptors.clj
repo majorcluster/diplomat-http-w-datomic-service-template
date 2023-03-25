@@ -1,4 +1,4 @@
-(ns {{namespace}}.ports.http.routes.interceptors
+(ns bakery.ports.http.routes.interceptors
   (:require [clojure.data.json :as cjson]))
 
 (defn convert-to-json

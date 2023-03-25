@@ -1,6 +1,6 @@
-(ns {{namespace}}.controllers.breads
+(ns bakery.controllers.breads
   (:require [datomic-helper.entity :as d.ent]
-            [{{namespace}}.ports.datomic.core :as d.c])
+            [bakery.ports.datomic.core :as d.c])
   (:import (java.util UUID)))
 
 (defn get-all

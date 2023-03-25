@@ -1,9 +1,9 @@
-(ns {{namespace}}.ports.http.routes.breads-integration-test
+(ns bakery.ports.http.routes.breads-integration-test
   (:require [clojure.test :refer :all]
             [core-test :refer :all]
             [clojure.data.json :as cjson]
             [io.pedestal.test :refer :all]
-            [{{namespace}}.controllers.breads :as c.b]
+            [bakery.controllers.breads :as c.b]
             [clj-data-adapter.core :as data-adapter]
             [clojure.string :as cstr])
   (:import [java.util UUID]))

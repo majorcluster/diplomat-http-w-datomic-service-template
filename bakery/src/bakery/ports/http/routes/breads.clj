@@ -1,7 +1,7 @@
-(ns {{namespace}}.ports.http.routes.breads
-  (:require [{{namespace}}.controllers.breads :as c.breads]
-            [{{namespace}}.adapters.breads :as a.breads]
-            [{{namespace}}.ports.http.routes.utils :refer :all]
+(ns bakery.ports.http.routes.breads
+  (:require [bakery.controllers.breads :as c.breads]
+            [bakery.adapters.breads :as a.breads]
+            [bakery.ports.http.routes.utils :refer :all]
             [pedestal-api-helper.params-helper :as ph])
   (:import (clojure.lang ExceptionInfo)
            [java.util UUID]))

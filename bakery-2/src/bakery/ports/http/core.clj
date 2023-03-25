@@ -1,9 +1,9 @@
-(ns {{namespace}}.ports.http.core
+(ns bakery.ports.http.core
   (:require [io.pedestal.http :as http]
             [io.pedestal.http :as server]
             [io.pedestal.http.route :as route]
-            [{{namespace}}.ports.http.routes.core :as routes]
-            [{{namespace}}.configs :as configs]))
+            [bakery.ports.http.routes.core :as routes]
+            [bakery.configs :as configs]))
 
 (def service {:env (keyword configs/env)
               ::http/routes routes/specs

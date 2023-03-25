@@ -1,7 +1,7 @@
-(ns {{namespace}}.ports.http.routes.breads
-  (:require [{{namespace}}.controllers.breads :as c.breads]
-            [{{namespace}}.adapters.breads :as a.breads]
-            [{{namespace}}.ports.http.routes.utils :refer :all]
+(ns bakery.ports.http.routes.breads
+  (:require [bakery.controllers.breads :as c.breads]
+            [bakery.adapters.breads :as a.breads]
+            [bakery.ports.http.routes.utils :refer :all]
             [pedestal-api-helper.params-helper :as ph])
   (:import (clojure.lang ExceptionInfo)
            [java.util UUID]))
@@ -17,9 +17,9 @@
                         :id)) (let [result (-> request :path-params :id
                                                UUID/fromString
                                                c.breads/get-by-id)
-                                    not-found? (nil? result)]
-                                (cond not-found? {:status 404 :headers json-header :body {}}
-                                      :else {:status 200 :headers json-header :body result}))
+                                            not-found? (nil? result)]
+                                        (cond not-found? {:status 404 :headers json-header :body {}}
+                                              :else {:status 200 :headers json-header :body result}))
         :else {:status 404 :headers json-header :body {}}))
 
 (defn post-bread
@@ -27,8 +27,8 @@
   (try
     (let [bread-id (->  (get request :json-params {})
                         (ph/validate-and-mop!!
-                         ["name","unit-grams","price"]
-                         ["name","unit-grams","price"])
+                            ["name","unit-grams","price"]
+                            ["name","unit-grams","price"])
                         a.breads/convert-inbound
                         c.breads/post)]
       {:status 201
@@ -47,8 +47,8 @@
     (let [bread (get request :json-params {})
           bread-id (->  bread
                         (ph/validate-and-mop!!
-                         ["id"]
-                         ["id","name","unit-grams","price"])
+                          ["id"]
+                          ["id","name","unit-grams","price"])
                         a.breads/convert-inbound
                         (c.breads/patch (-> bread :id UUID/fromString)))]
       {:status 200

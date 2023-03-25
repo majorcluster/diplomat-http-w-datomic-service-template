@@ -1,0 +1,5 @@
+{
+ bakery.ports.datomic.core/db-host      "datomic:mem:/"
+ bakery.ports.datomic.core/db-name      "bakery"
+ bakery.configs/env                     "test"
+ }

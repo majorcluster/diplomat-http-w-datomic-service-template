@@ -1,4 +1,4 @@
-(ns {{namespace}}.adapters.breads
+(ns bakery.adapters.breads
   (:require [clj-data-adapter.core :as data-adapter]))
 
 (defn convert-inbound-values

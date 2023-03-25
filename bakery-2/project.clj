@@ -1,4 +1,4 @@
-(defproject {{raw-name}} "0.0.1-SNAPSHOT"
+(defproject bakery "0.0.1-SNAPSHOT"
             :description "FIXME: write description"
             :url "http://example.com/FIXME"
             :license {:name "Eclipse Public License"
@@ -24,10 +24,10 @@
             :aliases {"config" ["run" "-m" "outpace.config.generate"]}
             :resource-paths ["config", "resources"]
             :jvm-opts ["-Dresource.config.edn=app-config.edn"]
-            :profiles {:dev {:aliases {"run-dev" ["trampoline" "run" "-m" "{{namespace}}.server/run-dev"]}
+            :profiles {:dev {:aliases {"run-dev" ["trampoline" "run" "-m" "bakery.server/run-dev"]}
                              :dependencies [[io.pedestal/pedestal.service-tools "0.5.10"]]
                              :jvm-opts ["-Dresource.config.edn=dev-config.edn"]}
                        :test {:dependencies [[io.pedestal/pedestal.service-tools "0.5.10"]]
                               :jvm-opts ["-Dresource.config.edn=test-config.edn"]}
-                       :uberjar {:aot [{{namespace}}.server]}}
-            :main ^{:skip-aot true} {{namespace}}.server)
+                       :uberjar {:aot [bakery.server]}}
+            :main ^{:skip-aot true} bakery.server)
