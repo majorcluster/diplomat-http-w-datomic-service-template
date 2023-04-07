@@ -1,0 +1,23 @@
+name: Deploy package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  deploy:
+    name: Deploy
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: lein deps
+      - name: Import GPG Key
+        uses: crazy-max/ghaction-import-gpg@v1
+        env:
+         GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+         PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      - name: Deploy to clojars
+        run: CLOJARS_USERNAME=${{ secrets.CLOJARS_USERNAME }} CLOJARS_PASSWORD=${{ secrets.CLOJARS_PASSWORD }} lein deploy clojars
