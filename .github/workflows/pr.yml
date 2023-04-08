@@ -1,0 +1,25 @@
+name: PR checks
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run install
+        run: lein install
+      - name: Generate sample
+        run: lein new org.clojars.majorcluster/diplomat-http-w-datomic-service bakery
+      - name: Install dependencies
+        run: lein deps
+        working-directory: ./bakery
+      - name: Run tests
+        run: lein test
+        working-directory: ./bakery
